@@ -1,0 +1,40 @@
+<div>
+    
+    <mat-icon mat-dialog-close class="cancel"style="color: red;">close</mat-icon>
+    </div>
+    <table class="table ">
+      <thead class="thead-dark" >
+        <tr class="bold">
+          <th scope="col">First Name </th>
+          <th scope="col">Last Name </th>
+          <th scope="col">Email Id </th>
+          <th scope="col">Gender </th>
+          <th scope="col">Date of Joining</th>
+          <th scope="col">Reporting Manager </th>
+          <th scope="col">Primary Skill</th>
+          <th scope="col">Status</th>
+          <th scope="col">Date of Birth </th>
+          <th scope="col">Contry Code</th>
+          <th scope="col">Contact</th>
+    
+        </tr>
+      </thead> 
+      <tbody>
+    
+        <tr *ngIf="this.selectedRow">
+          <th>{{this.selectedRow.first_name}}</th>
+          <th>{{this.selectedRow.last_name}}</th>
+          <th>{{this.selectedRow.email_id}}</th>
+          <th>{{this.selectedRow.gender}}</th>
+          <th>{{this.selectedRow.date_of_joining}}</th>
+          <th>{{this.selectedRow.reporting_manager}}</th>
+          <th>{{this.selectedRow.primary_skill}}</th>
+          <th>{{this.selectedRow.status}}</th>
+          <th>{{this.selectedRow.date_of_birth}}</th>
+          <th>{{this.selectedRow.country_code}}</th>
+          <th>{{this.selectedRow.contact}}</th>
+    
+        </tr>
+      </tbody>
+    
+    </table>

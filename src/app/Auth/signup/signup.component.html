@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="forms-container">
+      <div class="signin-signup">
+
+        <form [formGroup]="signupform" (ngSubmit)="signUp()" class="sign-in-form">
+          <h2 class="title">Sign Up</h2>
+          <br>
+        
+
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+
+            <input type="text" placeholder="Enter your Name" formControlName="name" />
+            <span style="color: red;"
+                *ngIf="signupform.get('name')?.hasError('required') && signupform.get('name')?.touched">
+                <small>*Name is required</small></span>
+                <small style="color: red; " *ngIf="signupform.get('name')?.hasError('pattern')">
+                  *Name only contains letters
+                </small>
+
+          </div>
+          <br>
+
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+
+            <input type="email" placeholder="Email Address" formControlName="email_id" />
+            <div>
+              <span style="color: red;"
+                *ngIf="signupform.get('email_id')?.hasError('required') && signupform.get('email_id')?.touched">
+                <small>*Email is required</small></span>
+
+              <small style="color: red; " *ngIf="signupform.get('email_id')?.hasError('pattern')">
+                *Email is not Valid
+              </small>
+
+            
+            </div>
+          </div>
+          <br>          
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" formControlName="password" placeholder="Password" />
+            <small style="color: red;"
+              *ngIf="signupform.get('password')?.hasError('required') && signupform.get('password')?.touched">*Password is
+              required</small>
+
+             
+          </div>
+          <br>
+
+         
+         
+         
+          <input type="submit" [disabled]="!signupform.valid" value="Signup"  class="btn solid" />
+
+        </form>
+
+
+
+      </div>
+    </div>
+
+
+
+    <div class="panels-container">
+      <div class="panel left-panel">
+        <div class="content">
+          <div class="logo py-4">
+            <img src="./assets/logo.png" alt="Company Logo" />
+          </div>
+          <h3>AKITRA</h3>
+          <p>
+            Akitra delivers AI-powered, cloud-based compliance automation and cybersecurity solutions to provide a more
+            integrated and efficient approach to safeguarding your organization's data and applications
+          </p>
+
+          <button class="btn transparent" id="sign-up-btn" routerLink="/login">
+            Login</button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>

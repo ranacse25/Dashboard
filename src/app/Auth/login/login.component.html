@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="forms-container">
+      <div class="signin-signup">
+
+        <form [formGroup]="LoginForm" (ngSubmit)="onsubmit()" class="sign-in-form">
+          <h2 class="title">Welcome in AKITRA</h2>
+          <br>
+          <h4 class="title">Login</h4>
+
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+
+            <input type="email" placeholder="Email Address" formControlName="email_id" />
+            <div>
+              <span style="color: red;"
+                *ngIf="LoginForm.get('email_id')?.hasError('required') && LoginForm.get('email_id')?.touched">
+                <small>*Email is required</small></span>
+
+              <small style="color: red; " *ngIf="LoginForm.get('email_id')?.hasError('pattern')">
+                *Email is not Valid
+              </small>
+            </div>
+          </div>
+          <br>
+          
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" formControlName="password" placeholder="Password" />
+            <small style="color: red;"
+              *ngIf="LoginForm.get('password')?.hasError('required') && LoginForm.get('password')?.touched">*Password is
+              required</small>
+          </div>
+          <br>
+          <input type="submit" value="Login" [disabled]="!LoginForm.valid" class="btn solid" />
+
+        </form>
+
+
+
+      </div>
+    </div>
+
+
+
+    <div class="panels-container">
+      <div class="panel left-panel">
+        <div class="content">
+          <div class="logo py-4">
+            <img src="./assets/logo.png" alt="Company Logo" />
+          </div>
+          <h3>AKITRA</h3>
+          <p>
+            Akitra delivers AI-powered, cloud-based compliance automation and cybersecurity solutions to provide a more
+            integrated and efficient approach to safeguarding your organization's data and applications
+          </p>
+
+          <button class="btn transparent" id="sign-up-btn" routerLink="/signup">
+            Join us</button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>

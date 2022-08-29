@@ -1,0 +1,76 @@
+{
+  "employee_management": [
+    {
+      "first_name": "Rajesh",
+      "last_name": "Rawat",
+      "email_id": "rajesh@gmail.com",
+      "gender": "Male",
+      "date_of_joining": "2022-08-26",
+      "reporting_manager": "Shalni",
+      "department": "UI/UX",
+      "status": "Active",
+      "primary_skill": "HTML",
+      "date_of_birth": "2022-08-19",
+      "country_code": "Japan +81",
+      "contact": "7784561234",
+      "id": 1
+    },
+    {
+      "first_name": "Ramesh",
+      "last_name": "Chamoli",
+      "email_id": "rajesh@gmail.com",
+      "gender": "Male",
+      "date_of_joining": "18/08/22",
+      "reporting_manager": "Akanksha",
+      "department": "Machine Learning",
+      "status": "Active",
+      "primary_skill": "Angular",
+      "date_of_birth": "15/06//1998",
+      "country_code": "Japan +81",
+      "contact": "7878989845",
+      "id": "4"
+    },
+    {
+      "first_name": "Mohit ",
+      "last_name": "Rawat",
+      "email_id": "mohit@gmail.com",
+      "gender": "Male",
+      "date_of_joining": "2022-08-18",
+      "reporting_manager": "Shalni",
+      "department": "NodeJs",
+      "status": "Active",
+      "primary_skill": "Angular",
+      "date_of_birth": "1998-06-25",
+      "country_code": "USA +1-808",
+      "contact": "7848457521",
+      "id": "L73fxLz"
+    }
+  ],
+  "users": [
+    {
+      "name": "parikshit",
+      "email_id": "rana@gmail.com",
+      "password": "rana123",
+      "created_datetime": "2022-08-24T19:30:32.400Z",
+      "updated_datetime": "2022-08-24T19:30:32.400Z",
+      "id": 1
+    },
+    {
+      "name": "pallu",
+      "email_id": "pk@gmail.com",
+      "password": "pk123",
+      "created_datetime": "2022-08-25T05:17:18.722Z",
+      "updated_datetime": "2022-08-25T05:17:18.722Z",
+      "id": 2
+    }
+  ],
+  "Bar_chart_Data": {
+    "UI/UX": 1,
+    "Machine Learning": 1,
+    "NodeJs": 1
+  },
+  "Pie_chart_Data": {
+    "HTML": 1,
+    "Angular": 1
+  }
+}
